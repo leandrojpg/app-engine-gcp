@@ -1,10 +1,11 @@
-runtime: nodejs12
+runtime: python27
+api_version: 1
+threadsafe: true
 
 handlers:
-  - url: /
-    static_files: www/index.html
-    upload: www/index.html
+- url: /
+  static_files: website/index.html
+  upload: website/index.html
 
-  - url: /(www/.*)$
-    static_files: www/\1.html
-    upload: www/.*\.html$
+- url: /
+  static_dir: website
